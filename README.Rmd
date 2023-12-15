@@ -32,8 +32,8 @@ ggplot(mtcars, aes(x = wt, y = mpg)) +
   geom_point() +
   geom_smooth(method = "lm", formula = y ~ x, alpha = .15, colour = "#1E64C8") +
   facet_wrap(~cyl, ncol = 3) +
-  scale_y_continuous(limits = c(0, 40)) +
-  scale_x_continuous(limits = c(0, 6), breaks = seq(0, 6, 1)) +
+  scale_y_continuous(limits = c(5, 35)) +
+  scale_x_continuous(limits = c(0, 5.5), breaks = seq(0, 5, 1)) +
   labs(
     title = "Motor Trend Car Road Tests",
     subtitle = "Vehicles miles per gallon vs weight by number of cylinders",
