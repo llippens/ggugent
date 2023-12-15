@@ -1,9 +1,10 @@
 .Rproj.user
 
-# Package-making resources
-pkg-making-resources/
+resources/
+
 .Rhistory
 .Rdata
 .httr-oauth
 .DS_Store
 .quarto
+
