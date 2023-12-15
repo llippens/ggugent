@@ -7,9 +7,9 @@
 theme_ugent(base_size = 20, faculty_colour = NULL)
 }
 \arguments{
-\item{base_size}{A numeric value determining the base font size for various text elements within the ggplot. This parameter sets a standard size from which relative sizes of other text elements (like titles, subtitles, axis labels, and legend text) are calculated. The default value is set to 20, which serves as a starting point for scaling the text sizes in the plot. A larger \code{base_size} will proportionally increase the size of all text elements, making the plot more suitable for presentations or large displays. In contrast, a smaller \code{base_size} will reduce the text size, which might be ideal for plots intended for smaller formats like academic papers or reports.}
+\item{base_size}{A numeric value determining the base font size for various text elements within the ggplot. This parameter sets a standard size from which relative sizes of other text elements (like titles, subtitles, axis labels, and legend text) are calculated. The default value is set to 20.}
 
-\item{faculty_colour}{A character string representing the shortcode for a specific faculty within Ghent University. This parameter allows the theme customisation to reflect the unique identity of different faculties by applying their particular colour. Users should provide the shortcode corresponding to the faculty (e.g., "EB" for the Faculty of Economics and Business Administration), and the function will automatically apply the faculty's designated colour to the plot elements. If the provided short code is not recognised, or if \code{faculty_colour} is left as \code{NULL}, the function defaults to using the standard UGent Yellow as the accent colour. This feature facilitates easy alignment of plot aesthetics with faculty-specific branding guidelines.}
+\item{faculty_colour}{A character string representing the shortcode for a specific faculty within Ghent University. This parameter allows the theme customisation to reflect the unique identity of different faculties (e.g., "EB" for the Faculty of Economics and Business Administration) by applying their particular colour. If the provided shortcode is not recognised, or if \code{faculty_colour} is left as \code{NULL}, the function defaults to using the UGent yellow (\verb{#FFD200}) as the accent colour. For now, this parameter only influences the strip text's colour.}
 }
 \value{
 A ggplot2 theme object.
@@ -21,7 +21,6 @@ The theme aims to create a visually appealing and consistent style for data visu
 adhering to UGent's branding guidelines.
 }
 \examples{
-# To apply the theme to a ggplot object
 library(ggplot2)
 library(ggugent)
 
@@ -30,8 +29,8 @@ ggplot(mtcars, aes(x = wt, y = mpg)) +
   geom_point() +
   geom_smooth(method = "lm", formula = y ~ x, alpha = .15, colour = "#1E64C8") +
   facet_wrap(~cyl, ncol = 3) +
-  scale_y_continuous(limits = c(0, 40)) +
-  scale_x_continuous(limits = c(0, 6), breaks = seq(0, 6, 1)) +
+  scale_y_continuous(limits = c(5, 35)) +
+  scale_x_continuous(limits = c(0, 5.5), breaks = seq(0, 5, 1)) +
   labs(
     title = "Motor Trend car road tests",
     subtitle = "Vehicles miles per gallon vs weight by number of cylinders",
