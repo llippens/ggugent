@@ -9,9 +9,7 @@ output: md_document
 
 The `ggugent` package provides a custom ggplot2 theme (`theme_ugent`) tailored to the branding guidelines of Ghent University (UGent). This theme allows R users to create ggplot2 visualisations that adhere to the university's style, including font, colours, and other aesthetic elements.
 
-::: {style="border:1px solid red; padding: 10px; background-color: #FFB6C1; margin: 10px 0;"}
-<strong>Important.</strong> This package is currently under development.
-:::
+> **Important.** This package is currently under development.
 
 ## Installation
 

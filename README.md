@@ -6,7 +6,7 @@ theme allows R users to create ggplot2 visualisations that adhere to the
 university’s style, including font, colours, and other aesthetic
 elements.
 
-<strong>Important.</strong> This package is currently under development.
+> **Important.** This package is currently under development.
 
 ## Installation
 
