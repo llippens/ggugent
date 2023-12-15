@@ -2,15 +2,15 @@
 
 # ggugent
 
-The `ggugent` package provides a custom ggplot2 theme (`theme_ugent`)
-tailored to the branding guidelines of Ghent University (UGent). This
-theme allows R users to create ggplot2 visualisations that adhere to the
-university’s style, including font, colours, and other aesthetic
-elements.
+The `ggugent` package provides a custom, opinionated ggplot2 theme
+(`theme_ugent`) tailored to the branding guidelines of Ghent University
+(UGent). This theme allows R users to create ggplot2 visualisations that
+align with the university’s style, including font, colours, and other
+aesthetic elements.
 
 ## Installation
 
-You can install the development version from GitHub with:
+You can install the development version from GitHub.
 
     # install.packages("devtools")
     devtools::install_github("llippens/ggugent")
@@ -44,35 +44,29 @@ UGent theme to your ggplot2 objects. Here’s an example using the
 
 ## Features
 
--   **Custom Font**. The theme uses ‘UGent Panno Text’ as the default
+1.  **Custom Font**. The theme uses ‘UGent Panno Text’ as the default
     font (and ‘Arial’ as secondary or fall-back font).
--   **Adaptable Text Size**. The `base_size` parameter sets a standard
+2.  **Adaptable Text Size**. The `base_size` parameter sets a standard
     font size from which relative sizes of other text elements are
     calculated.
--   **UGent Colour Theme**. The theme uses UGent blue `#1E64C8` as its
+3.  **UGent Colour Theme**. The theme uses UGent blue `#1E64C8` as its
     base colour.
--   **Faculty Colours**. The `faculty_colour` parameter specifies
+4.  **Faculty Colours**. The `faculty_colour` parameter specifies
     faculty colours through character shortcodes like “EB” for the
-    Faculty of Economics and Business Administration.
-    -   `LW` for the Faculty of Arts and Philosophy (Orange, `#F1A42B`)
-    -   `RE` for the Faculty of Law and Criminology (Warm red,
-        `#DC4E28`)
-    -   `WE` for the Faculty of Sciences (Aqua, `#2D8CA8`)
-    -   `GE` for the Faculty of Medicine and Health Sciences (Salmon
-        pink, `#E85E71`)
-    -   `EA` for the Faculty of Engineering and Architecture (Medium
-        sky-blue, `#8BBEE8`)
-    -   `EB` for the Faculty of Economics and Business Administration
-        (Light green, `#AEB050`)
-    -   `DI` for the Faculty of Veterinary Medicine (Purple, `#825491`)
-    -   `PP` for the Faculty of Psychology and Educational Sciences
-        (Warm orange, `#FB7E3A`)
-    -   `BW` for the Faculty of Bioscience Engineering (Turquoise,
-        `#27ABAD`)
-    -   `FW` for the Faculty of Pharmaceutical Sciences (Light purple,
-        `#BE5190`)
-    -   `PS` for the Faculty of Political and Social Sciences (Green,
-        `#71A860`)
+    Faculty of Economics and Business Administration. - `LW` for the
+    Faculty of Arts and Philosophy (orange, `#F1A42B`) - `RE` for the
+    Faculty of Law and Criminology (warm red, `#DC4E28`) - `WE` for the
+    Faculty of Sciences (aqua, `#2D8CA8`) - `GE` for the Faculty of
+    Medicine and Health Sciences (salmon pink, `#E85E71`) - `EA` for the
+    Faculty of Engineering and Architecture (medium sky-blue,
+    `#8BBEE8`) - `EB` for the Faculty of Economics and Business
+    Administration (light green, `#AEB050`) - `DI` for the Faculty of
+    Veterinary Medicine (purple, `#825491`) - `PP` for the Faculty of
+    Psychology and Educational Sciences (warm orange, `#FB7E3A`) - `BW`
+    for the Faculty of Bioscience Engineering (turquoise, `#27ABAD`) -
+    `FW` for the Faculty of Pharmaceutical Sciences (light purple,
+    `#BE5190`) - `PS` for the Faculty of Political and Social Sciences
+    (green, `#71A860`)
 
 ## Contributing
 
