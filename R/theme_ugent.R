@@ -68,17 +68,17 @@ theme_ugent <-
 
     ## Mapping of faculty shortcodes to colours
     faculty_colours <- list(
-      LW = "#F1A42B", # Faculty of Arts and Philosophy (Orange)
-      RE = "#DC4E28", # Faculty of Law and Criminology (Warm red)
-      WE = "#2D8CA8", # Faculty of Sciences (Aqua)
-      GE = "#E85E71", # Faculty of Medicine and Health Sciences (Salmon pink)
-      EA = "#8BBEE8", # Faculty of Engineering and Architecture (Medium sky-blue)
-      EB = "#AEB050", # Faculty of Economics and Business Administration (Light green)
-      DI = "#825491", # Faculty of Veterinary Medicine (Purple)
-      PP = "#FB7E3A", # Faculty of Psychology and Educational Sciences (Warm orange)
-      BW = "#27ABAD", # Faculty of Bioscience Engineering (Turquoise)
-      FW = "#BE5190", # Faculty of Pharmaceutical Sciences (Light purple)
-      PS = "#71A860"  # Faculty of Political and Social Sciences (Green)
+      LW = "#F1A42B", # Faculty of Arts and Philosophy (orange)
+      RE = "#DC4E28", # Faculty of Law and Criminology (warm red)
+      WE = "#2D8CA8", # Faculty of Sciences (aqua)
+      GE = "#E85E71", # Faculty of Medicine and Health Sciences (salmon pink)
+      EA = "#8BBEE8", # Faculty of Engineering and Architecture (medium sky-blue)
+      EB = "#AEB050", # Faculty of Economics and Business Administration (light green)
+      DI = "#825491", # Faculty of Veterinary Medicine (purple)
+      PP = "#FB7E3A", # Faculty of Psychology and Educational Sciences (warm orange)
+      BW = "#27ABAD", # Faculty of Bioscience Engineering (turquoise)
+      FW = "#BE5190", # Faculty of Pharmaceutical Sciences (light purple)
+      PS = "#71A860"  # Faculty of Political and Social Sciences (green)
     )
 
     ## Determine the faculty colour based on the provided shortcode
