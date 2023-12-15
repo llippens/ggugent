@@ -55,19 +55,24 @@ UGent theme to your ggplot2 objects. Here’s an example using the
     faculty colours through character shortcodes like “EB” for the
     Faculty of Economics and Business Administration.
 
-<!-- -->
-
-    -   `LW` for the Faculty of Arts and Philosophy (orange, `#F1A42B`)
-    -   `RE` for the Faculty of Law and Criminology (warm red, `#DC4E28`)
-    -   `WE` for the Faculty of Sciences (aqua, `#2D8CA8`)
-    -   `GE` for the Faculty of Medicine and Health Sciences (salmon pink, `#E85E71`)
-    -   `EA` for the Faculty of Engineering and Architecture (medium sky-blue, `#8BBEE8`)
-    -   `EB` for the Faculty of Economics and Business Administration (light green, `#AEB050`)
-    -   `DI` for the Faculty of Veterinary Medicine (purple, `#825491`)
-    -   `PP` for the Faculty of Psychology and Educational Sciences (warm orange, `#FB7E3A`)
-    -   `BW` for the Faculty of Bioscience Engineering (turquoise, `#27ABAD`)
-    -   `FW` for the Faculty of Pharmaceutical Sciences (light purple, `#BE5190`)
-    -   `PS` for the Faculty of Political and Social Sciences (green, `#71A860`)
+-   `LW` for the Faculty of Arts and Philosophy (orange, `#F1A42B`)
+-   `RE` for the Faculty of Law and Criminology (warm red, `#DC4E28`)
+-   `WE` for the Faculty of Sciences (aqua, `#2D8CA8`)
+-   `GE` for the Faculty of Medicine and Health Sciences (salmon pink,
+    `#E85E71`)
+-   `EA` for the Faculty of Engineering and Architecture (medium
+    sky-blue, `#8BBEE8`)
+-   `EB` for the Faculty of Economics and Business Administration (light
+    green, `#AEB050`)
+-   `DI` for the Faculty of Veterinary Medicine (purple, `#825491`)
+-   `PP` for the Faculty of Psychology and Educational Sciences (warm
+    orange, `#FB7E3A`)
+-   `BW` for the Faculty of Bioscience Engineering (turquoise,
+    `#27ABAD`)
+-   `FW` for the Faculty of Pharmaceutical Sciences (light purple,
+    `#BE5190`)
+-   `PS` for the Faculty of Political and Social Sciences (green,
+    `#71A860`)
 
 ## Contributing
 
