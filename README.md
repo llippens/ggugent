@@ -83,4 +83,4 @@ pull request. Issue reports are also warmly welcomed.
 ## Licensing
 
 The code in this project is licensed under MIT license. See
-[LICENSE](LICENSE.md) for more information.
+[LICENSE](LICENSE) for more information.
