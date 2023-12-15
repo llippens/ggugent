@@ -53,6 +53,7 @@ ggplot(mtcars, aes(x = wt, y = mpg)) +
 1.   **Adaptable Text Size**. The `base_size` parameter sets a standard font size from which relative sizes of other text elements are calculated.
 1.   **UGent Colour Theme**. The theme uses UGent blue `#1E64C8` as its base colour.
 1.   **Faculty Colours**. The `faculty_colour` parameter specifies faculty colours through character shortcodes like "EB" for the Faculty of Economics and Business Administration.
+
     -   `LW` for the Faculty of Arts and Philosophy (orange, `#F1A42B`)
     -   `RE` for the Faculty of Law and Criminology (warm red, `#DC4E28`)
     -   `WE` for the Faculty of Sciences (aqua, `#2D8CA8`)
