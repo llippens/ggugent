@@ -4,21 +4,22 @@
 \alias{theme_ugent}
 \title{UGent-styled theme for ggplot2}
 \usage{
-theme_ugent(base_size = 20, faculty_colour = NULL)
+theme_ugent(base_size = 20, faculty = NULL)
 }
 \arguments{
-\item{base_size}{A numeric value determining the base font size for various text elements within the ggplot. This parameter sets a standard size from which relative sizes of other text elements (like titles, subtitles, axis labels, and legend text) are calculated. The default value is set to 20.}
+\item{base_size}{A numeric value determining the base font size for various text elements within the ggplot. This parameter sets a standard size from which relative sizes of other text elements (such as titles, subtitles, axis labels, and legend text) are calculated. The default value is set to 20.}
 
-\item{faculty_colour}{A character string representing the shortcode for a specific faculty within Ghent University. This parameter allows the theme customisation to reflect the unique identity of different faculties (e.g., "EB" for the Faculty of Economics and Business Administration) by applying their particular colour. If the provided shortcode is not recognised, or if \code{faculty_colour} is left as \code{NULL}, the function defaults to using the UGent yellow (\verb{#FFD200}) as the accent colour. For now, this parameter only influences the strip text's colour.}
+\item{faculty}{A character string representing the shortcode for a specific faculty within Ghent University. This parameter allows the theme customisation to reflect the unique identity of different faculties (e.g., "EB" for the Faculty of Economics and Business Administration) by applying their particular colour to some of the plot elements. If the provided shortcode is not recognised, or if \code{faculty} is left as \code{NULL}, the function defaults to using UGent yellow (\verb{#FFD200}) as the accent colour. For now, this parameter only influences the strip text's colour.}
 }
 \value{
 A ggplot2 theme object.
 }
 \description{
-This function applies a custom theme to ggplot objects, using UGent Panno Text as the default font.
-It includes customized settings for plot titles, subtitles, captions, legends, axes, and panel grids.
+This function applies a custom theme to ggplot objects.
 The theme aims to create a visually appealing and consistent style for data visualisations,
 adhering to UGent's branding guidelines.
+It uses UGent Panno Text as the default font and
+includes customised (colour) settings for plot titles, subtitles, captions, legends, axes, and panel grids.
 }
 \examples{
 library(ggplot2)
@@ -45,7 +46,7 @@ ggplot(data = mtcars, mapping = aes(x = wt, y = mpg)) +
   ) +
   theme_ugent(
     base_size = 20,
-    faculty_colour = "EB"
+    faculty = "EB"
   )
 
 }

@@ -1,12 +1,13 @@
 #' UGent-styled theme for ggplot2
 #'
-#' This function applies a custom theme to ggplot objects, using UGent Panno Text as the default font.
-#' It includes customized settings for plot titles, subtitles, captions, legends, axes, and panel grids.
+#' This function applies a custom theme to ggplot objects.
 #' The theme aims to create a visually appealing and consistent style for data visualisations,
 #' adhering to UGent's branding guidelines.
+#' It uses UGent Panno Text as the default font and
+#' includes customised (colour) settings for plot titles, subtitles, captions, legends, axes, and panel grids.
 #'
-#' @param base_size A numeric value determining the base font size for various text elements within the ggplot. This parameter sets a standard size from which relative sizes of other text elements (like titles, subtitles, axis labels, and legend text) are calculated. The default value is set to 20.
-#' @param faculty_colour A character string representing the shortcode for a specific faculty within Ghent University. This parameter allows the theme customisation to reflect the unique identity of different faculties (e.g., "EB" for the Faculty of Economics and Business Administration) by applying their particular colour. If the provided shortcode is not recognised, or if `faculty_colour` is left as `NULL`, the function defaults to using the UGent yellow (`#FFD200`) as the accent colour. For now, this parameter only influences the strip text's colour.
+#' @param base_size A numeric value determining the base font size for various text elements within the ggplot. This parameter sets a standard size from which relative sizes of other text elements (such as titles, subtitles, axis labels, and legend text) are calculated. The default value is set to 20.
+#' @param faculty A character string representing the shortcode for a specific faculty within Ghent University. This parameter allows the theme customisation to reflect the unique identity of different faculties (e.g., "EB" for the Faculty of Economics and Business Administration) by applying their particular colour to some of the plot elements. If the provided shortcode is not recognised, or if `faculty` is left as `NULL`, the function defaults to using UGent yellow (`#FFD200`) as the accent colour. For now, this parameter only influences the strip text's colour.
 #'
 #' @importFrom ggplot2 geom_point geom_smooth facet_wrap scale_x_continuous scale_y_continuous labs theme theme_minimal element_text element_blank margin element_line element_rect unit
 #' @importFrom extrafont loadfonts fonttable
@@ -38,7 +39,7 @@
 #'   ) +
 #'   theme_ugent(
 #'     base_size = 20,
-#'     faculty_colour = "EB"
+#'     faculty = "EB"
 #'   )
 #'
 #' @export
@@ -46,7 +47,7 @@
 theme_ugent <-
   function(
     base_size = 20,
-    faculty_colour = NULL
+    faculty = NULL
   ) {
 
     # Fonts
@@ -86,8 +87,8 @@ theme_ugent <-
 
     ## Determine the faculty colour based on the provided shortcode
     accent_colour <-
-      if (!is.null(faculty_colour) && faculty_colour %in% names(faculty_colours)) {
-        faculty_colours[[faculty_colour]]
+      if (!is.null(faculty) && faculty %in% names(faculty_colours)) {
+        faculty_colours[[faculty]]
       } else {
         ugent_yellow # Default colour
       }
@@ -98,11 +99,11 @@ theme_ugent <-
         # Customisations for plot title
         plot.title = ggplot2::element_text(
           family = font, size = base_size, colour = ugent_blue,
-          margin = ggplot2::margin(b = 0.5 * base_size, unit = "pt")
+          margin = ggplot2::margin(b = 0.25 * base_size, unit = "pt")
         ),
         # Customisations for plot subtitle
         plot.subtitle = ggplot2::element_text(
-          family = font, size = 0.8 * base_size, colour = ugent_blue,
+          family = font, size = 0.9 * base_size, colour = ugent_blue,
           margin = ggplot2::margin(b = 0.5 * base_size, unit = "pt")
         ),
         # Customisations for plot caption
@@ -120,7 +121,7 @@ theme_ugent <-
         ),
         # Customisations for axes
         axis.title = ggplot2::element_text(
-          family = font, size = 0.8 * base_size, colour = ugent_blue
+          family = font, size = 0.75 * base_size, colour = ugent_blue
         ),
         axis.text = ggplot2::element_text(
           family = font, size = 0.65 * base_size, colour = ugent_black
@@ -141,7 +142,7 @@ theme_ugent <-
           fill = "white",
           colour = NA),
         strip.text = ggplot2::element_text(
-          size = 0.8 * base_size, color = accent_colour
+          size = 0.75 * base_size, color = accent_colour
         ),
         panel.spacing = ggplot2::unit(0.75 * base_size, "pt")
       )
