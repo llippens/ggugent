@@ -1,6 +1,4 @@
-> **Important.** This package is currently under development.
-
-# ggugent
+> **Important.** This package is currently under development. \# ggugent
 
 The `ggugent` package provides a custom, opinionated ggplot2 theme
 (`theme_ugent`) tailored to the branding guidelines of Ghent University
@@ -23,20 +21,24 @@ UGent theme to your ggplot2 objects. Here’s an example using the
 
     library(ggplot2)
     library(ggugent)
-
-    ggplot(mtcars, aes(x = wt, y = mpg)) +
+    ggplot(data = mtcars, mapping = aes(x = wt, y = mpg)) +
       geom_point() +
-      geom_smooth(method = "lm", formula = y ~ x, alpha = .15, colour = "#1E64C8") +
-      facet_wrap(~cyl, ncol = 3) +
-      scale_y_continuous(limits = c(5, 35)) +
-      scale_x_continuous(limits = c(0, 5.5), breaks = seq(0, 5, 1)) +
-      labs(
-        title = "Motor Trend Car Road Tests",
-        subtitle = "Vehicles miles per gallon vs weight by number of cylinders",
-        caption = "Source: Motor Trend US magazine"
+      geom_smooth(
+        method = "lm",
+        formula = y ~ x,
+        alpha = .15,
+        colour = "#1E64C8"
       ) +
-      xlab("Weight (1,000 lbs)") +
-      ylab("Miles / (US) gallon") +
+      facet_wrap(~cyl, ncol = 3) +
+      scale_x_continuous(limits = c(0, 5.5), breaks = seq(0, 5, 1)) +
+      scale_y_continuous(limits = c(5, 35)) +
+      labs(
+        title = "Motor Trend car road tests",
+        subtitle = "Vehicles miles per gallon vs weight by number of cylinders",
+        caption = "Source: Motor Trend US magazine",
+        x = "Weight (x1,000 lbs)",
+        y = "Miles / (US) gallon"
+      ) +
       theme_ugent(
         base_size = 20,
         faculty_colour = "EB"
