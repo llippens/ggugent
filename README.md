@@ -43,7 +43,7 @@ UGent theme to your ggplot2 objects. Here’s an example using the
       ) +
       theme_ugent(
         base_size = 20,
-        faculty_colour = "EB"
+        faculty = "EB"
       )
 
 ## Features

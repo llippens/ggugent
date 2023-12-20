@@ -47,7 +47,7 @@ ggplot(data = mtcars, mapping = aes(x = wt, y = mpg)) +
   ) +
   theme_ugent(
     base_size = 20,
-    faculty_colour = "EB"
+    faculty = "EB"
   )
 ```
 
