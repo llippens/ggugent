@@ -53,9 +53,7 @@ theme_ugent <-
     extrafont::loadfonts(quiet = TRUE)
     available_fonts <- extrafont::fonttable()$Family
     primary <- "UGent Panno Text"
-    primary_b <- "UGent Panno Text SemiBold"
     secondary <- "Arial"
-    secondary_b <- "Arial-BoldMT"
 
     ## Check for primary UGent font, else rely on fallback option
     font <-
@@ -63,13 +61,6 @@ theme_ugent <-
         primary
       } else {
         secondary
-      }
-
-    font_b <-
-      if (primary_b %in% available_fonts) {
-        primary_b
-      } else {
-        secondary_b
       }
 
     # UGent colours
@@ -106,7 +97,8 @@ theme_ugent <-
       ggplot2::theme(
         # Customisations for plot title
         plot.title = ggplot2::element_text(
-          family = font_b, size = base_size, colour = ugent_blue,
+          family = font, size = base_size, colour = ugent_blue,
+          margin = ggplot2::margin(b = 0.5 * base_size, unit = "pt")
         ),
         # Customisations for plot subtitle
         plot.subtitle = ggplot2::element_text(
