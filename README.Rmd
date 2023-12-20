@@ -5,7 +5,8 @@ date: "`r Sys.Date()`"
 output: md_document
 ---
 
-> **Important.** This package is currently under development.
+**Important.** This package is currently under development.
+
 # ggugent
 
 The `ggugent` package provides a custom, opinionated ggplot2 theme (`theme_ugent`) tailored to the branding guidelines of Ghent University (UGent). This theme allows R users to create ggplot2 visualisations that align with the university's style, including font, colours, and other aesthetic elements.

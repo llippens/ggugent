@@ -1,4 +1,6 @@
-> **Important.** This package is currently under development. \# ggugent
+**Important.** This package is currently under development.
+
+# ggugent
 
 The `ggugent` package provides a custom, opinionated ggplot2 theme
 (`theme_ugent`) tailored to the branding guidelines of Ghent University
