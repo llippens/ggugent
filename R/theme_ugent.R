@@ -121,7 +121,7 @@ theme_ugent <-
         ),
         # Customisations for axes
         axis.title = ggplot2::element_text(
-          family = font, size = 0.75 * base_size, colour = ugent_blue
+          family = font, size = 0.8 * base_size, colour = ugent_blue
         ),
         axis.text = ggplot2::element_text(
           family = font, size = 0.65 * base_size, colour = ugent_black
@@ -142,7 +142,7 @@ theme_ugent <-
           fill = "white",
           colour = NA),
         strip.text = ggplot2::element_text(
-          size = 0.75 * base_size, color = accent_colour
+          size = 0.65 * base_size, color = accent_colour
         ),
         panel.spacing = ggplot2::unit(0.75 * base_size, "pt")
       )
