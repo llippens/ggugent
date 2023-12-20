@@ -107,7 +107,6 @@ theme_ugent <-
         # Customisations for plot title
         plot.title = ggplot2::element_text(
           family = font_b, size = base_size, colour = ugent_blue,
-          lineheight = 0.9,
         ),
         # Customisations for plot subtitle
         plot.subtitle = ggplot2::element_text(
