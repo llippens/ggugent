@@ -25,19 +25,24 @@ library(ggplot2)
 library(ggugent)
 
 # Using mtcars dataset as an example
-ggplot(mtcars, aes(x = wt, y = mpg)) +
+ggplot(data = mtcars, mapping = aes(x = wt, y = mpg)) +
   geom_point() +
-  geom_smooth(method = "lm", formula = y ~ x, alpha = .15, colour = "#1E64C8") +
+  geom_smooth(
+    method = "lm",
+    formula = y ~ x,
+    alpha = .15,
+    colour = "#1E64C8"
+  ) +
   facet_wrap(~cyl, ncol = 3) +
-  scale_y_continuous(limits = c(5, 35)) +
   scale_x_continuous(limits = c(0, 5.5), breaks = seq(0, 5, 1)) +
+  scale_y_continuous(limits = c(5, 35)) +
   labs(
     title = "Motor Trend car road tests",
     subtitle = "Vehicles miles per gallon vs weight by number of cylinders",
-    caption = "Source: Motor Trend US magazine"
+    caption = "Source: Motor Trend US magazine",
+    x = "Weight (x1,000 lbs)",
+    y = "Miles / (US) gallon"
   ) +
-  xlab("Weight (x1,000 lbs)") +
-  ylab("Miles / (US) gallon") +
   theme_ugent(
     base_size = 20,
     faculty_colour = "EB"

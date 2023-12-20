@@ -8,7 +8,7 @@
 #' @param base_size A numeric value determining the base font size for various text elements within the ggplot. This parameter sets a standard size from which relative sizes of other text elements (like titles, subtitles, axis labels, and legend text) are calculated. The default value is set to 20.
 #' @param faculty_colour A character string representing the shortcode for a specific faculty within Ghent University. This parameter allows the theme customisation to reflect the unique identity of different faculties (e.g., "EB" for the Faculty of Economics and Business Administration) by applying their particular colour. If the provided shortcode is not recognised, or if `faculty_colour` is left as `NULL`, the function defaults to using the UGent yellow (`#FFD200`) as the accent colour. For now, this parameter only influences the strip text's colour.
 #'
-#' @importFrom ggplot2 theme theme_minimal element_text element_blank margin element_line element_rect unit
+#' @importFrom ggplot2 geom_point geom_smooth facet_wrap scale_x_continuous scale_y_continuous labs theme theme_minimal element_text element_blank margin element_line element_rect unit
 #' @importFrom extrafont loadfonts fonttable
 #'
 #' @return A ggplot2 theme object.
@@ -18,19 +18,24 @@
 #' library(ggugent)
 #'
 #' # Using mtcars dataset as an example
-#' ggplot(mtcars, aes(x = wt, y = mpg)) +
+#' ggplot(data = mtcars, mapping = aes(x = wt, y = mpg)) +
 #'   geom_point() +
-#'   geom_smooth(method = "lm", formula = y ~ x, alpha = .15, colour = "#1E64C8") +
+#'   geom_smooth(
+#'     method = "lm",
+#'     formula = y ~ x,
+#'     alpha = .15,
+#'     colour = "#1E64C8"
+#'   ) +
 #'   facet_wrap(~cyl, ncol = 3) +
-#'   scale_y_continuous(limits = c(5, 35)) +
 #'   scale_x_continuous(limits = c(0, 5.5), breaks = seq(0, 5, 1)) +
+#'   scale_y_continuous(limits = c(5, 35)) +
 #'   labs(
 #'     title = "Motor Trend car road tests",
 #'     subtitle = "Vehicles miles per gallon vs weight by number of cylinders",
-#'     caption = "Source: Motor Trend US magazine"
+#'     caption = "Source: Motor Trend US magazine",
+#'     x = "Weight (x1,000 lbs)",
+#'     y = "Miles / (US) gallon"
 #'   ) +
-#'   xlab("Weight (x1,000 lbs)") +
-#'   ylab("Miles / (US) gallon") +
 #'   theme_ugent(
 #'     base_size = 20,
 #'     faculty_colour = "EB"
@@ -48,15 +53,23 @@ theme_ugent <-
     extrafont::loadfonts(quiet = TRUE)
     available_fonts <- extrafont::fonttable()$Family
     primary <- "UGent Panno Text"
+    primary_b <- "UGent Panno Text SemiBold"
     secondary <- "Arial"
-    fallback <- secondary
+    secondary_b <- "Arial-BoldMT"
 
     ## Check for primary UGent font, else rely on fallback option
     font <-
       if (primary %in% available_fonts) {
         primary
       } else {
-        fallback
+        secondary
+      }
+
+    font_b <-
+      if (primary_b %in% available_fonts) {
+        primary_b
+      } else {
+        secondary_b
       }
 
     # UGent colours
@@ -93,12 +106,12 @@ theme_ugent <-
       ggplot2::theme(
         # Customisations for plot title
         plot.title = ggplot2::element_text(
-          family = font, size = base_size, face = "bold", colour = ugent_blue,
+          family = font_b, size = base_size, colour = ugent_blue,
           lineheight = 0.9,
         ),
         # Customisations for plot subtitle
         plot.subtitle = ggplot2::element_text(
-          family = font, size = 0.8 * base_size, face = "plain", colour = ugent_blue,
+          family = font, size = 0.8 * base_size, colour = ugent_blue,
           margin = ggplot2::margin(b = 0.5 * base_size, unit = "pt")
         ),
         # Customisations for plot caption
